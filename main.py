@@ -23,3 +23,6 @@ async def subtract(num1: str):
 async def add(num1: float, num2: float):
     return {"message": f"Hello {num1+num2}"}
 
+@app.get("/divide/{num1}")
+async def divide(num1: str):
+    return {"message": f"Hello {num1}"}
