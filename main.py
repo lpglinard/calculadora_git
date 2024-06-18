@@ -8,6 +8,7 @@ async def root():
     return {"message": "Hello World"}
 
 
-@app.get("/hello/{name}")
+@app.get("/add/?num1=<num1>&num2=<num2>")
 async def say_hello(name: str):
+    num1 = int()
     return {"message": f"Hello {name}"}
