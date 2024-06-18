@@ -12,6 +12,7 @@ async def root():
 async def say_hello(name: str):
     return {"message": f"Hello {name}"}
 
-@app.get("/multiply/{num}")
-async def multiplicacao(num: int):
-    return {"message": f"result {num}"}
+@app.get("/multiply/{num1}/{num2}")
+async def multiplicacao(num1: int, num2: int):
+    result = num1 * num2
+    return {"result": f"{result}"}
